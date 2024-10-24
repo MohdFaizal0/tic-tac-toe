@@ -68,3 +68,4 @@ const draw = () => {
   winner.innerText = `DRAW`;
   boxes.disabled = true;
 };
+console.log("hello");
