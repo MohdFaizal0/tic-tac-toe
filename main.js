@@ -26,7 +26,10 @@ boxes.forEach((box) => {
     box.disabled = true;
     count++;
 
-    checkWinner();
+    let isWinner = checkWinner();
+    if (!isWinner && count === 9) {
+      draw();
+    }
   });
 });
 
@@ -60,12 +63,7 @@ const checkWinner = () => {
   }
 };
 
-let isWinner = checkWinner();
-if (!isWinner && count === 9) {
-  draw();
-}
 const draw = () => {
-  winner.innerText = `DRAW`;
+  winner.innerText = "Draw";
   boxes.disabled = true;
 };
-console.log("hello");
